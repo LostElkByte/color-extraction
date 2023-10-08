@@ -1,0 +1,17 @@
+{
+  "name": "image-color-extraction",
+  "version": "1.0.0",
+  "description": "从图像中获取主色或调色板。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lostElk",
+  "license": "ISC",
+  "dependencies": {
+    "colorthief": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.3"
+  }
+}
