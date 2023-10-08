@@ -9,7 +9,8 @@
   "author": "lostElk",
   "license": "ISC",
   "dependencies": {
-    "colorthief": "^2.4.0"
+    "colorthief": "^2.4.0",
+    "nearest-color": "^0.4.4"
   },
   "devDependencies": {
     "@types/node": "^20.8.3"
