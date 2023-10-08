@@ -11,7 +11,7 @@ import {
  * @param img
  * @returns
  */
-export const mainColor = async (img: string, quality?: number) => {
+const mainColor = async (img: string, quality?: number) => {
   // 主色
   let mainColor: any;
 
@@ -50,7 +50,7 @@ interface paletteColor {
  * @param {colorCount, quality}
  * @returns
  */
-export const paletteColor = async (
+const paletteColor = async (
   img: string,
   { colorCount = 5, quality = 10 }: paletteColor = {},
 ) => {
@@ -80,18 +80,26 @@ export const paletteColor = async (
   return paletteColorAndNameList;
 };
 
-mainColor('img/QQ20211102-0.jpg', 10)
-  .then((colorName) => {
-    console.log(colorName);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+const colorExtraction = {
+  mainColor,
+  paletteColor,
+};
 
-paletteColor('img/QQ20211102-0.jpg', { colorCount: 5, quality: 10 })
-  .then((colorName) => {
-    console.log(colorName);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+export default colorExtraction;
+// colorExtraction
+//   .mainColor('img/QQ20211102-0.jpg', 10)
+//   .then((colorName) => {
+//     console.log(colorName);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+// colorExtraction
+//   .paletteColor('img/QQ20211102-0.jpg', { colorCount: 5, quality: 10 })
+//   .then((colorName) => {
+//     console.log(colorName);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });

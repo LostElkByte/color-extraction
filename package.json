@@ -1,11 +1,16 @@
 {
-  "name": "image-color-extraction",
+  "name": "color-extraction",
   "version": "1.0.0",
   "description": "从图像中获取主色或调色板。",
-  "main": "index.js",
+  "main": "dist/image-color-extraction.umd.js",
+  "module": "dist/image-color-extraction.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build"
   },
+  "files": [
+    "dist"
+  ],
   "author": "lostElk",
   "license": "ISC",
   "dependencies": {
@@ -13,6 +18,7 @@
     "nearest-color": "^0.4.4"
   },
   "devDependencies": {
-    "@types/node": "^20.8.3"
+    "@types/node": "^20.8.3",
+    "vite": "^4.4.11"
   }
 }
