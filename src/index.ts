@@ -86,14 +86,14 @@ const colorExtraction = {
 };
 
 export default colorExtraction;
-// colorExtraction
-//   .mainColor('img/QQ20211102-0.jpg', 10)
-//   .then((colorName) => {
-//     console.log(colorName);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
+colorExtraction
+  .mainColor('img/QQ20211102-0.jpg', 10)
+  .then((colorName) => {
+    console.log(colorName);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 // colorExtraction
 //   .paletteColor('img/QQ20211102-0.jpg', { colorCount: 5, quality: 10 })

@@ -1,4 +1,4 @@
-import ColorThief from 'colorthief';
+const { getColor, getPalette } = require('colorthief');
 
 /**
  * 提取图片主色
@@ -6,9 +6,8 @@ import ColorThief from 'colorthief';
  * @returns
  */
 export const getMainColor = (imgUrl: string, quality: number = 10) => {
-  console.log(ColorThief);
   const mainColor = new Promise((resolve, reject) => {
-    ColorThief.getColor(imgUrl, quality)
+    getColor(imgUrl, quality)
       .then((color: unknown) => {
         resolve(color);
       })
@@ -35,7 +34,7 @@ export const getPaletteColor = (
   { colorCount = 5, quality = 10 }: paletteColor = {},
 ) => {
   const paletteColor = new Promise((resolve, reject) => {
-    ColorThief.getPalette(imgUrl, colorCount, quality)
+    getPalette(imgUrl, colorCount, quality)
       .then((color: unknown) => {
         resolve(color);
       })
