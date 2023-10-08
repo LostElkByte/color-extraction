@@ -5,9 +5,9 @@ import ColorThief from 'colorthief';
  * @param imgUrl
  * @returns
  */
-export const getMainColor = (imgUrl: string) => {
+export const getMainColor = (imgUrl: string, quality: number = 10) => {
   const mainColor = new Promise((resolve, reject) => {
-    ColorThief.getColor(imgUrl, 10)
+    ColorThief.getColor(imgUrl, quality)
       .then((color: unknown) => {
         resolve(color);
       })
@@ -18,14 +18,23 @@ export const getMainColor = (imgUrl: string) => {
   return mainColor;
 };
 
+interface paletteColor {
+  colorCount?: number;
+  quality?: number;
+}
+
 /**
  * 提取图片调色板
- * @param imgUrl
+ * @param img
+ * @param {colorCount, quality}
  * @returns
  */
-export const getPaletteColor = (imgUrl: string) => {
+export const getPaletteColor = (
+  imgUrl: string,
+  { colorCount = 5, quality = 10 }: paletteColor = {},
+) => {
   const paletteColor = new Promise((resolve, reject) => {
-    ColorThief.getPalette(imgUrl, 8)
+    ColorThief.getPalette(imgUrl, colorCount, quality)
       .then((color: unknown) => {
         resolve(color);
       })
