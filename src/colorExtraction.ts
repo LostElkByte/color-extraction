@@ -6,6 +6,7 @@ import ColorThief from 'colorthief';
  * @returns
  */
 export const getMainColor = (imgUrl: string, quality: number = 10) => {
+  console.log(ColorThief);
   const mainColor = new Promise((resolve, reject) => {
     ColorThief.getColor(imgUrl, quality)
       .then((color: unknown) => {

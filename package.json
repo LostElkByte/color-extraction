@@ -1,9 +1,9 @@
 {
   "name": "color-extraction",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "从图像中获取主色或调色板。",
-  "main": "dist/image-color-extraction.umd.js",
-  "module": "dist/image-color-extraction.mjs",
+  "main": "dist/color-extraction.umd.js",
+  "module": "dist/color-extraction.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "vite build"
