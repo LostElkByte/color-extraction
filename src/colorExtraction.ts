@@ -3,44 +3,41 @@ const { getColor, getPalette } = require('colorthief');
 /**
  * 提取图片主色
  * @param imgUrl
- * @returns
+ * @param quality
+ * @returns Promise<[number, number, number]>
  */
-export const getMainColor = (imgUrl: string, quality: number = 10) => {
-  const mainColor = new Promise((resolve, reject) => {
-    getColor(imgUrl, quality)
-      .then((color: unknown) => {
-        resolve(color);
-      })
-      .catch((err: any) => {
-        reject(err);
-      });
-  });
-  return mainColor;
+export const getMainColor = async (
+  imgUrl: string,
+  quality: number = 10,
+): Promise<[number, number, number]> => {
+  try {
+    const color = await getColor(imgUrl, quality);
+    return color;
+  } catch (err) {
+    throw err;
+  }
 };
 
-interface paletteColor {
+interface PaletteColorOptions {
   colorCount?: number;
   quality?: number;
 }
 
 /**
  * 提取图片调色板
- * @param img
- * @param {colorCount, quality}
- * @returns
+ * @param imgUrl
+ * @param options
+ * @returns Promise<Array<[number, number, number]>>
  */
-export const getPaletteColor = (
+export const getPaletteColor = async (
   imgUrl: string,
-  { colorCount = 5, quality = 10 }: paletteColor = {},
-) => {
-  const paletteColor = new Promise((resolve, reject) => {
-    getPalette(imgUrl, colorCount, quality)
-      .then((color: unknown) => {
-        resolve(color);
-      })
-      .catch((err: any) => {
-        reject(err);
-      });
-  });
-  return paletteColor;
+  options: PaletteColorOptions = {},
+): Promise<Array<[number, number, number]>> => {
+  const { colorCount = 5, quality = 10 } = options;
+  try {
+    const colorPalette = await getPalette(imgUrl, colorCount, quality);
+    return colorPalette;
+  } catch (err) {
+    throw err;
+  }
 };
