@@ -1,8 +1,8 @@
 import { colorKey } from './utils/colorKey';
 import { colorDictionary } from './utils/colorDictionary';
 import { rgbToHex } from './utils/utils';
-const nearestColor = require('nearest-color').from(colorKey);
-
+import NearestColor from 'nearest-color';
+const nearestColor = NearestColor.from(colorKey);
 /**
  * 主色RBG转HEX
  * @param mainColor
