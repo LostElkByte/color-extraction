@@ -1,10 +1,10 @@
 import { getMainColor, getPaletteColor } from './colorThief';
 import { getNearestColor, getColorName } from './common/nearestColor';
+import { isColorValid, convertToHex, isHexColorValid } from './utils';
 import {
   mainColorRgbToHex,
   paletteColorRgbToHex,
 } from './common/colorConversion';
-import { isColorValid, convertToHex, isHexColorValid } from './utils';
 
 interface paletteColor {
   colorCount?: number;
@@ -109,10 +109,8 @@ const colorName = (color: any) => {
   return { color, colorName };
 };
 
-const colorExtraction = {
+export default {
   mainColor,
   paletteColor,
   colorName,
 };
-
-export default colorExtraction;
