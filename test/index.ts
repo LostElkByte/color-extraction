@@ -2,7 +2,7 @@ import colorExtraction from '../src/index';
 import { convertToHex, isColorValid } from '../src/utils';
 import { getNearestColor } from '../src/common/nearestColor';
 // colorExtraction
-//   .mainColor('img/QQ20211102-0.jpg', 10)
+//   .mainColor('./img/QQ20211102-0.jpg', 10)
 //   .then((colorName) => {
 //     console.log(colorName);
 //   })
@@ -11,7 +11,7 @@ import { getNearestColor } from '../src/common/nearestColor';
 //   });
 
 // colorExtraction
-//   .paletteColor('img/QQ20211102-0.jpg', { colorCount: 5, quality: 10 })
+//   .paletteColor('./img/QQ20211102-0.jpg', { colorCount: 5, quality: 10 })
 //   .then((colorName) => {
 //     console.log(colorName);
 //   })
