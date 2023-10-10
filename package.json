@@ -1,6 +1,6 @@
 {
   "name": "color-extraction",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "从图像中获取主色或调色板。",
   "main": "dist/color-extraction.umd.js",
   "module": "dist/color-extraction.mjs",
