@@ -6,7 +6,7 @@ export default defineConfig({
       name: 'colorExtraction',
     },
     rollupOptions: {
-      // external: [],
+      external: ['colorthief', 'nearest-color'],
       output: {
         globals: {
           colorExtraction: 'colorExtraction',
