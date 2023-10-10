@@ -3,13 +3,15 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/index.ts',
-      name: 'colorExtraction',
+      name: 'color-extraction',
     },
     rollupOptions: {
       external: ['colorthief', 'nearest-color', 'colord'],
       output: {
         globals: {
-          colorExtraction: 'colorExtraction',
+          'nearest-color': 'nearest-color',
+          colorthief: 'colorthief',
+          colord: 'colord',
         },
       },
     },

@@ -1,7 +1,7 @@
 {
   "name": "color-extraction",
   "version": "0.3.2",
-  "description": "从图像中获取主色或调色板。",
+  "description": "Gets the dominant color or color palette in the image and the color name in English and Chinese.",
   "main": "dist/color-extraction.umd.js",
   "module": "dist/color-extraction.mjs",
   "scripts": {
@@ -11,8 +11,22 @@
   "files": [
     "dist"
   ],
-  "author": "lostElk",
-  "license": "ISC",
+  "author": {
+    "name": "LostElk",
+    "email": "lostelk.email@gmail.com",
+    "url": "https://lostelk.cn"
+  },
+  "keywords": [
+    "color",
+    "palette",
+    "sampling",
+    "extraction",
+    "image",
+    "picture",
+    "photo",
+    "canvas"
+  ],
+  "license": "MIT",
   "dependencies": {
     "colord": "^2.9.3",
     "colorthief": "^2.4.0",
