@@ -2,7 +2,7 @@ import { colorKey } from './utils/colorKey';
 import { colorDictionary } from './utils/colorDictionary';
 import { rgbToHex } from './utils/utils';
 import NearestColor from 'nearest-color';
-const nearestColor = NearestColor.from(colorKey);
+const nearestColor = NearestColor.from(colorKey) as any;
 /**
  * 主色RBG转HEX
  * @param mainColor
