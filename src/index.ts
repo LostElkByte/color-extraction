@@ -1,4 +1,4 @@
-import { getMainColor, getPaletteColor } from './colorThief';
+import { getMainColor, getPaletteColor } from './common/colorThief';
 import { getNearestColor, getColorName } from './common/nearestColor';
 import { isColorValid, convertToHex, isHexColorValid } from './utils';
 import {

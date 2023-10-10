@@ -1,4 +1,4 @@
-import ColorThiefBrowser from '../node_modules/colorthief/dist/color-thief.mjs';
+import ColorThiefBrowser from '../../node_modules/colorthief/dist/color-thief.mjs';
 import ColorthiefNode from 'colorthief';
 
 let colorThief: any;
