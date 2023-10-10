@@ -1,4 +1,4 @@
-const { getColor, getPalette } = require('colorthief');
+import Colorthief from 'colorthief';
 
 /**
  * 提取图片主色
@@ -11,7 +11,7 @@ export const getMainColor = async (
   quality: number = 10,
 ): Promise<[number, number, number]> => {
   try {
-    const color = await getColor(imgUrl, quality);
+    const color = await Colorthief.getColor(imgUrl, quality);
     return color;
   } catch (err) {
     throw err;
@@ -35,7 +35,11 @@ export const getPaletteColor = async (
 ): Promise<Array<[number, number, number]>> => {
   const { colorCount = 5, quality = 10 } = options;
   try {
-    const colorPalette = await getPalette(imgUrl, colorCount, quality);
+    const colorPalette = await Colorthief.getPalette(
+      imgUrl,
+      colorCount,
+      quality,
+    );
     return colorPalette;
   } catch (err) {
     throw err;

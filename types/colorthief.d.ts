@@ -1,14 +1,18 @@
 declare module 'colorthief' {
-  export default class ColorThief {
-    constructor();
+  export type Color = [number, number, number];
+
+  interface ColorThief {
     getColor(
-      sourceImage: HTMLImageElement,
+      sourceImage: HTMLImageElement | string,
       quality?: number,
-    ): [number, number, number];
+    ): Promise<Color>;
     getPalette(
-      sourceImage: HTMLImageElement,
+      sourceImage: HTMLImageElement | string,
       colorCount?: number,
       quality?: number,
-    ): Array<[number, number, number]>;
+    ): Promise<Color[]>;
   }
+
+  const colorThief: ColorThief;
+  export default colorThief;
 }
