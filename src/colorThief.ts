@@ -1,6 +1,14 @@
-import ColorThief from '../../node_modules/colorthief/dist/color-thief.mjs';
+import ColorThiefBrowser from '../node_modules/colorthief/dist/color-thief.mjs';
+import ColorthiefNode from 'colorthief';
 
-const colorThief = new ColorThief();
+let colorThief;
+if (typeof window !== 'undefined') {
+  // 浏览器环境
+  colorThief = new ColorThiefBrowser();
+} else {
+  // Node.js 环境
+  colorThief = ColorthiefNode;
+}
 
 /**
  * 提取图片主色
