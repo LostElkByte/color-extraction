@@ -23,20 +23,24 @@
     const img = document.getElementById('img')
     img.crossOrigin = 'Anonymous'
     if (img.complete) {
-      colorExtraction.mainColor(img, 10).then((colorName) => {
-        console.log('mainColorName:', colorName)
-      })
-      colorExtraction.paletteColor(img, 10).then((colorName) => {
-        console.log('paletteColorName:', colorName)
-      })
-    } else {
-      img.addEventListener('load', function () {
-        colorExtraction.mainColor(img, 10).then((colorName) => {
+      colorExtraction.mainColor(img, 10)
+        .then((colorName) => {
           console.log('mainColorName:', colorName)
         })
-        colorExtraction.paletteColor(img, 10).then((colorName) => {
+      colorExtraction.paletteColor(img, 10)
+        .then((colorName) => {
           console.log('paletteColorName:', colorName)
         })
+    } else {
+      img.addEventListener('load', function () {
+        colorExtraction.mainColor(img, 10)
+          .then((colorName) => {
+            console.log('mainColorName:', colorName)
+          })
+        colorExtraction.paletteColor(img, 10)
+          .then((colorName) => {
+            console.log('paletteColorName:', colorName)
+          })
       })
     }
   </script>
