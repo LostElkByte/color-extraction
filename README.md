@@ -129,43 +129,43 @@ const colorExtraction = require('color-extraction');
   }
   ```
 
-##API
+## API
 
 ### mainColor(image, quality)
 
-<span style="color:orangered;font-weight: bold;">Returns: Promise<{ mainColorHex: String, colorName: [ String, String, String ] }></span>
+**Returns: Promise<{ mainColorHex: String, colorName: [ String, String, String ] }>**
 
 Gets the main color from the image. Returns an object that contains two properties: 1. mainColorHex is a string with a HEX color number representing the extracted color value; 2. colorName is an array that stores the corresponding name of the color.
 
-<span style="color:orangered;">image </span>- When called in the browser, this argument expects an HTML image element, not a URL. When run in Node, this argument expects a path to the image.
+**image** - When called in the browser, this argument expects an HTML image element, not a URL. When run in Node, this argument expects a path to the image.
 
-<span style="color:orangered;">quality</span> - Quality is an optional argument that must be an Integer of value 1 or greater, and defaults to 10. The number determines how many pixels are skipped before the next one is sampled. We rarely need to sample every single pixel in the image to get good results. The bigger the number, the faster a value will be returned.
+**quality** - Quality is an optional argument that must be an Integer of value 1 or greater, and defaults to 10. The number determines how many pixels are skipped before the next one is sampled. We rarely need to sample every single pixel in the image to get good results. The bigger the number, the faster a value will be returned.
 
 ---
 
 ### paletteColor(image, { colorCount, quality })
 
-<span style="color:orangered;font-weight: bold;">Returns: Promise<[{ paletteColorHex: String, colorName: [ String, String, String ] },...]></span>
+**Returns: Promise<[{ paletteColorHex: String, colorName: [ String, String, String ] },...]>**
 
 Get the color palette from the image. Returns an array. Each color in the array is an object that contains two attributes: 1. paletteColorHex is a string whose hexadecimal color number represents the extracted color value; 2. colorName is an array that stores the corresponding names of colors.
 
-<span style="color:orangered;">image </span>- When called in the browser, this argument expects an HTML image element, not a URL. When run in Node, this argument expects a path to the image.
+**image** - When called in the browser, this argument expects an HTML image element, not a URL. When run in Node, this argument expects a path to the image.
 
-<span style="color:orangered;"> colorCount </span>- ColorCount is an optional parameter and must be an integer of 1 or greater, with a default value of 5. This number determines how many palette colors to get.
+**colorCount** - ColorCount is an optional parameter and must be an integer of 1 or greater, with a default value of 5. This number determines how many palette colors to get.
 
-<span style="color:orangered;">quality</span> - Quality is an optional argument that must be an Integer of value 1 or greater, and defaults to 10. The number determines how many pixels are skipped before the next one is sampled. We rarely need to sample every single pixel in the image to get good results. The bigger the number, the faster a value will be returned.
+**quality** - Quality is an optional argument that must be an Integer of value 1 or greater, and defaults to 10. The number determines how many pixels are skipped before the next one is sampled. We rarely need to sample every single pixel in the image to get good results. The bigger the number, the faster a value will be returned.
 
 ---
 
 ### colorName(color)
 
-<span style="color:orangered;font-weight: bold;">Returns: { color: String, colorName: [ String, String, String ] }</span>
+**Returns: { color: String, colorName: [ String, String, String ] }**
 
 Gets the name of the color from the HEX or RGB color value. Returns an object with two properties :color is the passed color value; 2. colorName is an array that stores color names.
 
-<span style="color:orangered;"> color </span>- Support rgb and hex.
+**color** - Support rgb and hex.
 
-##FAQ
+## FAQ
 
 ### Do I have to wait for the image to load?
 
@@ -221,13 +221,13 @@ The canvas has been tainted by cross-origin data.
 
 then you are running into a cross-origin resouce sharing (CORS) issue. Check the following two items:
 
-1. <span style="color:orangered;font-weight: bold;">CORS policy on the server.</span> Is the server hosting the image properly configured? Make sure the requesting domain is whitelisted in the access-control-allow-origin header, or the server hosting the image has an open policy:
+1. **CORS policy on the server.** Is the server hosting the image properly configured? Make sure the requesting domain is whitelisted in the access-control-allow-origin header, or the server hosting the image has an open policy:
 
    ```
    access-control-allow-origin: *
    ```
 
-2. <span style="color:orangered;font-weight: bold;">crossorigin attr. </span>The HTML image element must be given a crossorigin attribute.
+2. **crossorigin attr.** The HTML image element must be given a crossorigin attribute.
 
    ```html
    <img
