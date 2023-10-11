@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>colorExtraction-test</title>
+  <script src="https://unpkg.com/color-extraction"></script>
+</head>
+
+<body>
+  <h1>color-extraction</h1>
+  <p>Gets the dominant color or color palette in the image and the color name in English and Chinese.</p>
+  <img id="img" style="width: auto; height: 300px" src="https://api.lostelk.cn/files/746/serve?size=large" alt="" />
+
+  <script>
+    // colorName test
+    const colorName = colorExtraction.colorName('#FFFFFF')
+    console.log(colorName);
+
+    // mainColor/paletteColor test
+    const img = document.getElementById('img')
+    img.crossOrigin = 'Anonymous'
+    if (img.complete) {
+      colorExtraction.mainColor(img, 10).then((colorName) => {
+        console.log('mainColorName:', colorName)
+      })
+      colorExtraction.paletteColor(img, 10).then((colorName) => {
+        console.log('paletteColorName:', colorName)
+      })
+    } else {
+      img.addEventListener('load', function () {
+        colorExtraction.mainColor(img, 10).then((colorName) => {
+          console.log('mainColorName:', colorName)
+        })
+        colorExtraction.paletteColor(img, 10).then((colorName) => {
+          console.log('paletteColorName:', colorName)
+        })
+      })
+    }
+  </script>
+</body>
+
+</html>
