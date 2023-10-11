@@ -3,7 +3,7 @@ import visualizer from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   plugins: [
-    visualizer({ open: true }), // 自动开启分析页面
+    visualizer({ open: false }), // 自动开启分析页面
   ],
 
   build: {
@@ -11,15 +11,15 @@ export default defineConfig({
       entry: 'src/index.ts',
       name: 'colorExtraction',
     },
-    // rollupOptions: {
-    //   external: ['colorthief', 'nearest-color', 'colord'],
-    //   output: {
-    //     globals: {
-    //       'nearest-color': 'nearest-color',
-    //       colorthief: 'colorthief',
-    //       colord: 'colord',
-    //     },
-    //   },
-    // },
+    rollupOptions: {
+      external: ['colorthief', 'nearest-color', 'colord'],
+      output: {
+        globals: {
+          'nearest-color': 'nearest-color',
+          colorthief: 'colorthief',
+          colord: 'colord',
+        },
+      },
+    },
   },
 });
