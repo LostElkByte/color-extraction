@@ -1,9 +1,10 @@
 {
   "name": "color-extraction",
-  "version": "0.3.2",
+  "version": "0.3.7",
   "description": "Gets the dominant color or color palette in the image and the color name in English and Chinese.",
   "main": "dist/color-extraction.umd.js",
   "module": "dist/color-extraction.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "vite build"
