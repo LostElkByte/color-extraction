@@ -21,11 +21,13 @@
     "color",
     "palette",
     "sampling",
-    "extraction",
+    "color-extraction",
     "image",
     "picture",
     "photo",
-    "canvas"
+    "canvas",
+    "color-names",
+    "color-keyword"
   ],
   "license": "MIT",
   "dependencies": {
