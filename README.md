@@ -1,4 +1,4 @@
-# color-extraction
+<h1 align="center">color-extraction</h1>
 
 [![npm](https://img.shields.io/npm/v/color-extraction?color=blue)](https://www.npmjs.com/package/color-extraction)
 [![GitHub issues](https://img.shields.io/github/issues/1363944642/color-extraction)](https://github.com/1363944642/color-extraction/issues)
@@ -6,6 +6,8 @@
 ](https://www.npmjs.com/package/color-extraction)
 ![npm package minimized gzipped size (select exports)](https://img.shields.io/bundlejs/size/color-extraction)
 [![NPM](https://img.shields.io/npm/l/color-extraction)](http://opensource.org/licenses/MIT)
+
+[English](README.md) · [简体中文](README.zh-Hans.md)
 
 Gets the dominant color or color palette in the image and the color name in English and Chinese.✨
 
@@ -169,7 +171,7 @@ Gets the name of the color from the HEX or RGB color value. Returns an object wi
 
 ### Do I have to wait for the image to load?
 
-Yes. If you see an error that reads: Cannot read property '0' of null, it is likely that the image had not finished loading when you passed it to mainColor() or paletteColor().
+Yes. If you see an error that reads: `Cannot read property '0' of null`, it is likely that the image had not finished loading when you passed it to `mainColor()` or `paletteColor()`.
 
 ```js
 // RISKY 🙀
@@ -201,7 +203,7 @@ Access to script at 'file://...' from origin 'null' has been blocked by CORS pol
 
 This is because the browser restricts direct access to the filesystem.
 
-To get around this, you can set up a minimal server to host the files. One option is http-server. To run this on demand without installing it as a project dependency, you can use the npx command:
+To get around this, you can set up a minimal server to host the files. One option is [http-server](https://github.com/http-party/http-server). To run this on demand without installing it as a project dependency, you can use the npx command:
 
 ```sh
 $ npx http-server
