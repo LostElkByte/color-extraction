@@ -1,9 +1,8 @@
-<h1 align="center">color-extraction</h1>
+# color-extraction
 
 [![npm](https://img.shields.io/npm/v/color-extraction?color=blue)](https://www.npmjs.com/package/color-extraction)
 [![GitHub issues](https://img.shields.io/github/issues/1363944642/color-extraction)](https://github.com/1363944642/color-extraction/issues)
-[![npm](https://img.shields.io/npm/dt/color-extraction)
-](https://www.npmjs.com/package/color-extraction)
+[![npm](https://img.shields.io/npm/dt/color-extraction)](https://www.npmjs.com/package/color-extraction)
 ![npm package minimized gzipped size (select exports)](https://img.shields.io/bundlejs/size/color-extraction)
 [![NPM](https://img.shields.io/npm/l/color-extraction)](http://opensource.org/licenses/MIT)
 
