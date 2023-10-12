@@ -7,7 +7,7 @@
 ![npm package minimized gzipped size (select exports)](https://img.shields.io/bundlejs/size/color-extraction)
 [![NPM](https://img.shields.io/npm/l/color-extraction)](http://opensource.org/licenses/MIT)
 
-[English](README.md) · [简体中文](README.zh-Hans.md)
+[English](README.md) · [简体中文](README.ZH.md)
 
 Gets the dominant color or color palette in the image and the color name in English and Chinese.✨
 
