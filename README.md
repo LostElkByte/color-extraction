@@ -147,7 +147,7 @@ Gets the main color from the image. Returns an object that contains two properti
 
 **Returns: Promise<[{ paletteColorHex: String, colorName: [ String, String, String ] },...]>**
 
-Get the color palette from the image. Returns an array. Each color in the array is an object that contains two attributes: 1. paletteColorHex is a string whose hexadecimal color number represents the extracted color value; 2. colorName is an array that stores the corresponding names of colors.
+Get the color palette from the image. Returns an array. The array contains several objects, each of which has two properties :paletteColorHex is a string with a hexadecimal color number representing the extracted color value; 2. colorName is an array that stores the corresponding names of colors.
 
 **image** - When called in the browser, this argument expects an HTML image element, not a URL. When run in Node, this argument expects a path to the image.
 
