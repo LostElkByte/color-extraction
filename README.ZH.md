@@ -30,7 +30,7 @@ const colorExtraction = require('color-extraction');
 
 - 获取颜色名称
 
-  > 将颜色转换为中英文关键字。(支持 rgb 和 hex)
+  > 将颜色转换为中英文关键字。
 
   ```js
   colorExtraction.colorName('#fff'); // { color: '#fff', colorName: [ '白', '白色', 'white' ] }
@@ -100,7 +100,7 @@ const colorExtraction = require('color-extraction');
 
 - 获取颜色名称
 
-  > 将颜色转换为中英文关键字。(支持 rgb 和 hex)
+  > 将颜色转换为中英文关键字。
 
   ```js
   colorExtraction.colorName('#fff'); // { color: '#fff', colorName: [ '白', '白色', 'white' ] }
@@ -164,7 +164,7 @@ const colorExtraction = require('color-extraction');
 
 从 HEX 或 RGB 颜色值获取颜色的名称。返回一个具有两个属性的对象:color 是传递的颜色值;2. colorName 是一个存储颜色名称的数组。
 
-**color** - 支持 rgb 和 hex.
+**color** - 支持 Hex, RGB, Named。
 
 ## 常见问题
 

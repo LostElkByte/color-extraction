@@ -1,6 +1,6 @@
 {
   "name": "color-extraction",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Gets the dominant color or color palette in the image and the color name in English and Chinese.",
   "main": "dist/color-extraction.umd.js",
   "module": "dist/color-extraction.mjs",
@@ -31,11 +31,12 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "colord": "^2.9.3",
     "colorthief": "^2.4.0",
-    "nearest-color": "^0.4.4"
+    "nearest-color": "^0.4.4",
+    "tinycolor2": "^1.6.0"
   },
   "devDependencies": {
+    "@types/tinycolor2": "^1.4.4",
     "@types/node": "^20.8.3",
     "rollup-plugin-visualizer": "^5.9.2",
     "vite": "^4.4.11"

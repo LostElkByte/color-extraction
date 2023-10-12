@@ -30,7 +30,7 @@ const colorExtraction = require('color-extraction');
 
 - Get colorName
 
-  > Convert colors to Chinese and English keywords.(Support rgb and hex)
+  > Convert colors to Chinese and English keywords.
 
   ```js
   colorExtraction.colorName('#fff'); // { color: '#fff', colorName: [ '白', '白色', 'white' ] }
@@ -100,7 +100,7 @@ const colorExtraction = require('color-extraction');
 
 - Get colorName
 
-  > Convert colors to Chinese and English keywords.(Support rgb and hex)
+  > Convert colors to Chinese and English keywords.
 
   ```js
   colorExtraction.colorName('#fff'); // { color: '#fff', colorName: [ '白', '白色', 'white' ] }
@@ -164,7 +164,7 @@ Get the color palette from the image. Returns an array. The array contains sever
 
 Gets the name of the color from the HEX or RGB color value. Returns an object with two properties :color is the passed color value; 2. colorName is an array that stores color names.
 
-**color** - Support rgb and hex.
+**color** - Support Hex, RGB, Named.
 
 ## FAQ
 

@@ -12,12 +12,12 @@ export default defineConfig({
       name: 'colorExtraction',
     },
     rollupOptions: {
-      external: ['colorthief', 'nearest-color', 'colord'],
+      external: ['colorthief', 'nearest-color', 'tinycolor2'],
       output: {
         globals: {
           'nearest-color': 'nearest-color',
           colorthief: 'colorthief',
-          colord: 'colord',
+          tinycolor2: 'tinycolor2',
         },
       },
     },

@@ -1,4 +1,5 @@
-import { colord } from 'colord';
+import tinycolor from 'tinycolor2';
+
 /**
  * [r,g,b]转换十六进制(HEX)
  * @param r
@@ -21,7 +22,7 @@ export const rgbArrayToHex = (r: Number, g: Number, b: Number) =>
  * @returns 如果颜色值有效返回 true，否则返回 false
  */
 export const isColorValid = (color: any): boolean => {
-  const isColor = colord(color).isValid();
+  const isColor = tinycolor(color).isValid();
   return isColor;
 };
 
@@ -32,7 +33,7 @@ export const isColorValid = (color: any): boolean => {
  */
 export const convertToHex = (color: any): string => {
   try {
-    const convertedColor = colord(color).toHex();
+    const convertedColor = tinycolor(color).toHexString();
     return convertedColor;
   } catch (error) {
     // 处理无效颜色值的错误
