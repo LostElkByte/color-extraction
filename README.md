@@ -164,7 +164,7 @@ Get the color palette from the image. Returns an array. The array contains sever
 
 Gets the name of the color from the HEX or RGB color value. Returns an object with two properties :color is the passed color value; 2. colorName is an array that stores color names.
 
-**color** - Support Hex, RGB, Named.
+**color** - Support Hex, RGB.
 
 ## FAQ
 
