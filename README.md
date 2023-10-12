@@ -30,7 +30,7 @@ const colorExtraction = require('color-extraction');
 
 - Get colorName
 
-  > Convert colors to Chinese and English keywords.
+  > Convert colors to Chinese and English keywords. (Support Hex、RGB、Named)
 
   ```js
   colorExtraction.colorName('#fff'); // { color: '#fff', colorName: [ '白', '白色', 'white' ] }
@@ -100,7 +100,7 @@ const colorExtraction = require('color-extraction');
 
 - Get colorName
 
-  > Convert colors to Chinese and English keywords.
+  > Convert colors to Chinese and English keywords. (Support Hex、RGB、Named)
 
   ```js
   colorExtraction.colorName('#fff'); // { color: '#fff', colorName: [ '白', '白色', 'white' ] }
