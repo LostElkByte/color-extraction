@@ -30,7 +30,7 @@ const colorExtraction = require('color-extraction');
 
 - 获取颜色名称
 
-  > 将颜色转换为中英文关键字。(支持 Hex、RGB、Named)
+  > 将颜色转换为中英文关键字。(支持 Hex、RGB)
 
   ```js
   colorExtraction.colorName('#fff'); // { color: '#fff', colorName: [ '白', '白色', 'white' ] }
@@ -100,7 +100,7 @@ const colorExtraction = require('color-extraction');
 
 - 获取颜色名称
 
-  > 将颜色转换为中英文关键字。(支持 Hex、RGB、Named)
+  > 将颜色转换为中英文关键字。(支持 Hex、RGB)
 
   ```js
   colorExtraction.colorName('#fff'); // { color: '#fff', colorName: [ '白', '白色', 'white' ] }
